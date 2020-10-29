@@ -1,0 +1,40 @@
+# install OpenCV by OS_family
+- name: Install this role on {{ansible_os_family}}
+  include: "{{ansible_os_family}}.yml"
+
+# download  OpenCV
+
+- name: Download opencv package
+  get_url:
+    url: https://nchc.dl.sourceforge.net/project/opencvlibrary/4.2.0/opencv-4.2.0-vc14_vc15.exe
+    dest: /data/
+
+- name: rename & unzip opencv
+  shell: 
+  args:
+    cmd:  mv opencv-4.2.0-vc14_vc15.exe opencv-4.2.0.zip  && unzip opencv-4.2.0.zip
+    chdir: /data
+
+#- name: Install opencv-python  pencv-contrib-python
+#  shell: | 
+#    pip install opencv-python
+#    pip install opencv-contrib-python
+
+# set soft link, -f enforce the exist links
+# ln -sf src des
+- name: set soft link
+  shell: |
+    ln -sf /opt/opencv  /data/wwwroot
+    ln -sf /opt/opencv/config /data/config
+
+# Check version,
+# must use sudo sh -c to solve the no-root permission
+- block:
+  - name: Check OpenCV Version
+    shell: sh -c ""
+      
+
+  
+   
+
+

@@ -1,0 +1,3 @@
+- name: check_opencv_service
+  debug:
+    var: check_opencv_service.stdout
