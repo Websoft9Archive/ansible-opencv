@@ -6,11 +6,16 @@ OpenCV 除了内核程序之外，还有大量的[模块](https://docs.opencv.or
 
 ## 安装
 
-OpenCV 基于C++开发，故需要编译才可运行。由于生态健全，已有大量的可以使用的二进制包可供在线安装。但涉及大更多的扩展模块的话，还需要进一步研究其安装方法。  
+OpenCV 基于C++开发，故需要编译才可运行。由于生态健全，已有大量的可以使用的二进制包可供在线安装。但涉及大更多的扩展模块（[官方模块](https://github.com/opencv/opencv/tree/master/modules)和[第三方模块](https://github.com/opencv/opencv_contrib)）的话，还需要进一步研究其安装方法。  
 
-另外，OpenCV 提供了 `OpenCV Bindings for Python` 这样的
+各种个性化的需求都以模块的形式进行扩展，包括：
 
-GPU 支持也是通过 CUDA 模块实现
+* Python
+* Java
+* CUDA （GPU）
+* ...
+
+以 Python 为例，OpenCV 称之为 `OpenCV Bindings for Python` 这样的一种叫法。
 
 ## 延伸
 
