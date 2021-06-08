@@ -10,6 +10,8 @@ OpenCV 基于C++开发，故需要编译才可运行。由于生态健全，已�
 
 另外，OpenCV 提供了 `OpenCV Bindings for Python` 这样的
 
+GPU 支持也是通过 CUDA 模块实现
+
 ## 延伸
 
 OpenCV 是机器视觉中的核心组件，以它为基础可以扩展更多的场景。
